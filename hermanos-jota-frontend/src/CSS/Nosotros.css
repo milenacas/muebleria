@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+.asides {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  font-family: 'Inter', sans-serif;
+  color: #2c2c2c; /* texto oscuro */
+}
+
+.bannerr {
+  background-color: #F5E6D3; /* alabastro cálido */
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(160, 82, 45, 0.1);
+}
+
+.bannerr aside h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #A0522D; /* siena tostado */
+  margin-bottom: 1.5rem;
+}
+
+.bannerr aside p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2c2c2c;
+  margin-bottom: 2rem;
+}
+
+.bannerr aside button {
+  padding: 1rem 2rem;
+  background-color: #A0522D; /* siena tostado */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.bannerr aside button:hover {
+  background-color: #8b4424;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.bannerr main h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #A0522D;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.nota {
+  background-color: #fff8f0;
+  border-left: 5px solid #A0522D;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(160, 82, 45, 0.08);
+}
+
+.nota h3 {
+  font-family: 'Playfair Display', serif;
+  color: #A0522D;
+  margin-bottom: 0.8rem;
+}
+
+.nota p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #2c2c2c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .asides {
+    padding: 3rem 1.5rem;
+  }
+
+  .bannerr aside h1 {
+    font-size: 2rem;
+  }
+
+  .bannerr main h2 {
+    font-size: 1.5rem;
+  }
+
+  .nota {
+    padding: 1rem;
+  }
+}

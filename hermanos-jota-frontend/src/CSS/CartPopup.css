@@ -1,0 +1,156 @@
+/* Fondo oscuro + desenfoque */
+.cart-popup11 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(4px); /* DESENFOQUE */
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+/* Animaciones del fondo */
+.fade-in11 {
+  opacity: 1;
+}
+
+.fade-out11 {
+  opacity: 0;
+}
+
+/* Panel deslizable */
+.cart-popup11-content {
+  background: #ffffff;
+  width: 380px;
+  height: 100%;
+  border-radius: 40px 0 0 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 25px rgba(0, 0, 0, 0.18);
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+}
+
+/* Entrada */
+.slide-in11 {
+  transform: translateX(0);
+}
+
+/* Salida */
+.slide-out11 {
+  transform: translateX(100%);
+}
+
+/* Botón cerrar */
+.close-btn11 {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #8b4a24;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.cart-popup11-content h2 {
+  margin-top: 5px;
+  font-size: 24px;
+  color: #8b4a24;
+}
+
+/* Scroll */
+.cart-items-wrapper11 {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 15px;
+  padding-right: 10px;
+}
+
+/* Items */
+.cart-item11 {
+  display: flex;
+  align-items: center;
+  background: #f8f7f5;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #eaded5;
+}
+
+.cart-item-image11 {
+  width: 100px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cart-item-info11 h4 {
+  color: #5a2e1b;
+}
+
+.cart-item-info11 p {
+  color: #8b4a24;
+  font-weight: bold;
+}
+
+/* Cantidad */
+.qty-btn11 {
+  border: 1px solid #8b4a24;
+  background: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: #8b4a24;
+  cursor: pointer;
+  margin: 7px;
+}
+
+.qty-btn11:hover {
+  background: #8b4a24;
+  color: white;
+}
+
+/* Botón quitar */
+.remove-btn11 {
+  background: #8b4a24;
+  border: none;
+  padding: 8px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Total */
+.cart-total11 {
+  font-size: 18px;
+  color: #5a2e1b;
+}
+
+/* Finalizar compra */
+.checkout-btn11 {
+  width: 100%;
+  background: #b86f40;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.checkout-btn11:hover {
+  background: #d07f4c;
+}
+
+/* Cuando está fade-out, no intercepta clics */
+.fade-out11 {
+  opacity: 0;
+  pointer-events: none;   /* ← MAGIA */
+}

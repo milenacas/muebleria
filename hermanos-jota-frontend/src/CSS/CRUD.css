@@ -1,0 +1,123 @@
+/* CRUD.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+.crud-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 5rem;
+  background-color: #F5E6D3; /* alabastro cálido */
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(160, 82, 45, 0.1);
+  font-family: 'Inter', sans-serif;
+  color: #2c2c2c;
+}
+
+.crud-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #A0522D; /* siena tostado */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.crud-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.crud-form input {
+  flex: 1 1 200px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.crud-form input:focus {
+  border-color: #A0522D;
+  box-shadow: 0 0 5px rgba(160, 82, 45, 0.3);
+}
+
+.crud-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: #A0522D; /* siena tostado */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.crud-form button:hover {
+  background-color: #8b4424;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.crud-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.crud-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff8f0;
+  border-left: 5px solid #A0522D;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(160, 82, 45, 0.08);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.crud-list li span {
+  flex: 1;
+}
+
+.crud-list button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #A0522D;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.crud-list button:hover {
+  background-color: #8b4424;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .crud-container {
+    padding: 1.5rem;
+  }
+
+  .crud-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .crud-form {
+    flex-direction: column;
+  }
+
+  .crud-form input,
+  .crud-form button {
+    flex: 1 1 100%;
+  }
+}

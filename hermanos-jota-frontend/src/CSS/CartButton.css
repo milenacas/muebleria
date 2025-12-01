@@ -1,0 +1,58 @@
+/* --------------------------
+   BOTÓN DEL CARRITO (FIJO)
+--------------------------- */
+.fixed-cart-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1000;
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color:  #87A96B; /* Botón blanco */
+  color:#ffffff;            /* Ícono marrón */
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+/* HOVER → botón verde + ícono blanco */
+.fixed-cart-button:hover {
+  background-color: #A0522D;
+  color: #fff6ea;
+  transform: scale(1.05);
+}
+
+/* --------------------------
+   ANIMACIÓN DEL ICONO
+--------------------------- */
+.cart-svg {
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.fixed-cart-button:hover .cart-svg {
+  transform: rotate(-10deg) scale(1.15);
+}
+
+/* --------------------------
+   BURBUJA DEL CONTADOR
+--------------------------- */
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff7700;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+}
