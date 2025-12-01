@@ -42,16 +42,27 @@ function App() {
   const [isFavoritesOpen, setIsFavoritesOpen] = useState(false);
 
   // Simular fetch de productos
-  useEffect(() => {
+useEffect(() => {
+  const fetchProductos = async () => {
     try {
-      setProductos(productosDetalle);
+      console.log("URL de la API:", process.env.REACT_APP_API_URL); // ← Aquí ves si está leyendo la env
+
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/productos`);
+      if (!res.ok) throw new Error("Error al cargar productos desde el backend");
+      const data = await res.json();
+      setProductos(data.data || []);
     } catch (err) {
-      console.error("Error al cargar productos:", err);
+      console.error(err);
       setError(err.message);
     } finally {
       setLoading(false);
     }
-  }, []);
+  };
+
+  fetchProductos();
+}, []);
+
+
 
   // Navegación general
   const handleNavigate = (view) => {

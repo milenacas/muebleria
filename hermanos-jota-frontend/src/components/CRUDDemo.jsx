@@ -26,7 +26,7 @@ function CRUDDemo({ productos, setProductos }) {
     setNombre("");
     setPrecio(0);
 
-<<<<<<< HEAD
+
 try {
   const res = await fetch(`${process.env.REACT_APP_API_URL}/api/productos`, {
     method: "POST",
@@ -34,15 +34,9 @@ try {
     body: JSON.stringify({ nombre, precio: Number(precio) }),
   });
 
-=======
-    try {
-      const res = await fetch("http://localhost:3001/api/productos", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nombre, precio: Number(precio) }),
-      });
->>>>>>> 290b00bede7983c776ef5ebe192663f65796f82a
-      const data = await res.json();
+const data = await res.json(); // ← ESTA LÍNEA FALTABA
+
+
 
       // 2. Manejar la respuesta del backend
       if (data.success) {
@@ -86,16 +80,14 @@ try {
     cancelEdit();
 
     try {
-<<<<<<< HEAD
        const res = await fetch(`http://localhost:3001/api/productos/${id}`, {
-=======
-      const res = await fetch(`http://localhost:3001/api/productos/${id}`, {
->>>>>>> 290b00bede7983c776ef5ebe192663f65796f82a
+
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nombre: editNombre, precio: Number(editPrecio) }),
       });
       const data = await res.json();
+      
 
       // 2. Manejar la respuesta del backend
       if (data.success) {
@@ -139,11 +131,8 @@ try {
     setProductos(prevProductos => prevProductos.filter((p) => p._id !== id));
 
     try {
-<<<<<<< HEAD
       const res = await fetch(`${process.env.REACT_APP_API_URL}/api/productos/${id}`, {
-=======
-      const res = await fetch(`http://localhost:3001/api/productos/${id}`, {
->>>>>>> 290b00bede7983c776ef5ebe192663f65796f82a
+
         method: "DELETE",
       });
       const data = await res.json();

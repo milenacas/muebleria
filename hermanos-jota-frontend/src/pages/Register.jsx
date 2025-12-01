@@ -23,7 +23,7 @@ export default function Register() {
     e.preventDefault();
 
     try {
-<<<<<<< HEAD
+
 const res = await fetch(
   `${process.env.REACT_APP_API_URL}/api/auth/registro`,
   {
@@ -35,15 +35,6 @@ const res = await fetch(
 
 const data = await res.json();
 
-=======
-      const res = await fetch("http://localhost:3001/api/auth/registro", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-
-      const data = await res.json();
->>>>>>> 290b00bede7983c776ef5ebe192663f65796f82a
 
       if (!data.success) {
         setMensaje(data.mensaje || "Error en el registro");

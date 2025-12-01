@@ -24,11 +24,7 @@ function DetalleProducto({
     const fetchProductos = async () => {
       setLoading(true);
       try {
-<<<<<<< HEAD
         const res = await fetch(`${process.env.REACT_APP_API_URL}/api/productos`);
-=======
-        const res = await fetch("http://localhost:3001/api/productos");
->>>>>>> 290b00bede7983c776ef5ebe192663f65796f82a
         if (!res.ok)
           throw new Error("Error al cargar productos desde el backend");
         const data = await res.json();

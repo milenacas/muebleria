@@ -14,8 +14,6 @@ root.render(
       </CartProvider>
     </AuthProvider>
   </BrowserRouter>
-<<<<<<< HEAD
+
 );
-=======
-);
->>>>>>> 290b00bede7983c776ef5ebe192663f65796f82a
+
